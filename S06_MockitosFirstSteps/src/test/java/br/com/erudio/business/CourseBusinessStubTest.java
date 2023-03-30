@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import br.com.erudio.service.CourseService;
 import br.com.erudio.service.stubs.CourseServiceStub;
 
-class CourseBusinessTest {
+class CourseBusinessStubTest {
 
     @Test
     void testCoursesRelatedToSpring_When_UsingAStub() {
