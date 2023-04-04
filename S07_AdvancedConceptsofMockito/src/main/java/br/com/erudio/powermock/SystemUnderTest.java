@@ -9,7 +9,7 @@ public class SystemUnderTest {
     private Dependency dependency;
 
     public int methodUsingAnArrayListConstructor() {
-        ArrayList list = new ArrayList();
+        ArrayList<Integer> list = new ArrayList<Integer>();
         return list.size();
     }
 
