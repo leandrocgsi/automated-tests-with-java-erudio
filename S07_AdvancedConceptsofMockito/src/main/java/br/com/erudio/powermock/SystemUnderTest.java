@@ -6,6 +6,7 @@ import java.util.List;
 import br.com.erudio.powermock.utils.UtilityClass;
 
 public class SystemUnderTest {
+    
     private Dependency dependency;
 
     public int methodUsingAnArrayListConstructor() {
