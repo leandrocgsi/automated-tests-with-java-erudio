@@ -15,12 +15,12 @@ class PaymentProcessorTest {
     @Test
     void mockObjectConstruction() {
 
-        // a real object of the PaymentProcessor is returned
+        // A real object of the PaymentProcessor is returned
         System.out.println(new PaymentProcessor().chargeCustomer("42", BigDecimal.valueOf(42)));
 
         try (MockedConstruction<PaymentProcessor> mocked = mockConstruction(PaymentProcessor.class)) {
 
-            // every object creation is returning a mock from now on
+            // Every object creation is returning a mock from now on
             PaymentProcessor paymentProcessor = new PaymentProcessor();
 
             when(paymentProcessor.chargeCustomer(anyString(), any(BigDecimal.class))).thenReturn(BigDecimal.TEN);
@@ -28,7 +28,7 @@ class PaymentProcessorTest {
             assertEquals(BigDecimal.TEN, paymentProcessor.chargeCustomer("42", BigDecimal.valueOf(42)));
         }
 
-        // a real object of the PaymentProcessor is returned
+        // A real object of the PaymentProcessor is returned
         System.out.println(new PaymentProcessor().chargeCustomer("42", BigDecimal.valueOf(42)));
     }
 
