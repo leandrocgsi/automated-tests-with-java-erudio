@@ -1,5 +1,6 @@
 package br.com.erudio.mockito.services;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,10 +12,11 @@ import org.mockito.MockedStatic;
 
 class OrderServiceTest {
     
-    OrderService service = new OrderService();
-    Object defaultUuid = UUID.fromString("8d8b30e3-de52-4f1c-a71c-9905a8043dac");
+    private final OrderService service = new OrderService();
+    private final UUID defaultUuid = UUID.fromString("8d8b30e3-de52-4f1c-a71c-9905a8043dac");
+    private final LocalDateTime defaultLocalDateTime = LocalDateTime.of(2023, 7, 4, 15, 50);
 
-    @DisplayName("Should Include Randon OrderId When No OrderId Exists")
+    @DisplayName("Should include random OrderId when no OrderId exists")
     @Test
     void testShouldIncludeRandonOrderId_When_NoOrderIdExists() {
         // Given / Arrange
@@ -25,7 +27,22 @@ class OrderServiceTest {
             Order result = service.createOrder("MacBook Pro", 2L, null);
 
             // Then / Assert
-            assertEquals(defaultUuid, result.getId());
+            assertEquals(defaultUuid.toString(), result.getId());
+        }
+    }
+    
+    @DisplayName("Should include current time when create a new Order")
+    @Test
+    void testShouldIncludeCurrentTime_When_CreateANewOrder() {
+        // Given / Arrange
+        try(MockedStatic<LocalDateTime> mockedUuid = mockStatic(LocalDateTime.class)) {
+            mockedUuid.when(LocalDateTime::now).thenReturn(defaultLocalDateTime);
+            
+            // When / Act
+            Order result = service.createOrder("MacBook Pro", 2L, null);
+            
+            // Then / Assert
+            assertEquals(defaultLocalDateTime, result.getCreationDate());
         }
     }
 
