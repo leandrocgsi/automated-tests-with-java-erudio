@@ -51,9 +51,9 @@ class PaymentProcessorTest {
     @Test
     void mockDifferentObjectConstructionWithAnswer() {
         try (MockedConstruction<PaymentProcessor> mocked = Mockito.mockConstructionWithAnswer(PaymentProcessor.class,
-                // default answer for the first mock
+                // Default answer for the first mock
                 invocation -> new BigDecimal("500.00"),
-                // additional answer for all further mocks
+                // Additional answer for all further mocks
                 invocation -> new BigDecimal("42.00"))) {
 
             PaymentProcessor firstInstance = new PaymentProcessor();
