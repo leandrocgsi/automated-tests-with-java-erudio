@@ -24,7 +24,7 @@ public class PaymentProcessor {
 
     public BigDecimal chargeCustomer(String customerId, BigDecimal netPrice) {
         
-        // any arbitrary implementation
+        // Any arbitrary implementation
         System.out.println("About to charge customer: " + customerId);
         return BigDecimal.ZERO;
     }
