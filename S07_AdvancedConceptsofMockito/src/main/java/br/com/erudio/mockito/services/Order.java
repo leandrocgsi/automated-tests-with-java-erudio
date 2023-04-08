@@ -1,12 +1,12 @@
-package br.com.erudio.mockito;
+package br.com.erudio.mockito.services;
 
 import java.time.LocalDateTime;
 
 public class Order {
     
+    private String id;
     private String productName;
     private Long amount;
-    private String id;
     private LocalDateTime creationDate;
     
     public Order() {}
