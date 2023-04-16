@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.never;
@@ -115,4 +116,40 @@ public class PersonServicesTest {
         assertTrue(personsList.isEmpty());
         assertEquals(0, personsList.size());
     }   
+    
+    @DisplayName("JUnit test for Given PersonId when findById then Return Person Object")
+    @Test
+    void testGivenPersonId_WhenFindById_thenReturnPersonObject() {
+        
+        // Given / Arrange
+        given(repository.findById(anyLong())).willReturn(Optional.of(person0));
+        
+        // When / Act
+        Person savedPerson = services.findById(1L);
+        
+        // Then / Assert
+        assertNotNull(savedPerson);
+        assertEquals("Leandro", savedPerson.getFirstName());
+    }  
+    
+    @DisplayName("JUnit test for Given Person Object when Update Person then Return Updated Person Object")
+    @Test
+    void testGivenPersonObject_WhenUpdatePerson_thenReturnUpdatedPersonObject() {
+        
+        // Given / Arrange
+        given(repository.findById(1L)).willReturn(Optional.of(person0));
+        
+        person0.setFirstName("Leonardo");
+        person0.setEmail("leonardo@erudio.com.br");
+        
+        given(repository.save(person0)).willReturn(person0);
+        
+        // When / Act
+        Person updatedPerson = services.update(person0);
+        
+        // Then / Assert
+        assertNotNull(updatedPerson);
+        assertEquals("Leonardo", updatedPerson.getFirstName());
+        assertEquals("leonardo@erudio.com.br", updatedPerson.getEmail());
+    }  
 }
