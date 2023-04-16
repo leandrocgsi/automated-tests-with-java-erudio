@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.BDDMockito.given;
+import static org.mockito.BDDMockito.*;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
@@ -137,7 +137,8 @@ public class PersonServicesTest {
     void testGivenPersonObject_WhenUpdatePerson_thenReturnUpdatedPersonObject() {
         
         // Given / Arrange
-        given(repository.findById(1L)).willReturn(Optional.of(person0));
+        person0.setId(1L);
+        given(repository.findById(anyLong())).willReturn(Optional.of(person0));
         
         person0.setFirstName("Leonardo");
         person0.setEmail("leonardo@erudio.com.br");
@@ -151,5 +152,21 @@ public class PersonServicesTest {
         assertNotNull(updatedPerson);
         assertEquals("Leonardo", updatedPerson.getFirstName());
         assertEquals("leonardo@erudio.com.br", updatedPerson.getEmail());
+    }  
+    
+    @DisplayName("JUnit test for Given PersonID when Delete Person then do Nothing")
+    @Test
+    void testGivenPersonID_WhenDeletePerson_thenDoNothing() {
+        
+        // Given / Arrange
+        person0.setId(1L);
+        given(repository.findById(anyLong())).willReturn(Optional.of(person0));
+        willDoNothing().given(repository).delete(person0);
+        
+        // When / Act
+        services.delete(person0.getId());
+        
+        // Then / Assert
+        verify(repository, times(1)).delete(person0);
     }  
 }
