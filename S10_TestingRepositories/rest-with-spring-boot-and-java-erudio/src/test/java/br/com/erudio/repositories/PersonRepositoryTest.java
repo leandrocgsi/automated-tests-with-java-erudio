@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.List;
 import java.util.Optional;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,15 +21,24 @@ class PersonRepositoryTest {
     @Autowired
     private PersonRepository repository;
     
+    private Person person0;
+    
+    @BeforeEach
+    public void setup() {
+        // Given / Arrange
+        person0 = new Person(
+            "Leandro",
+            "Costa",
+            "leandro@erudio.com.br",
+            "Uberlândia - Minas Gerais - Brasil",
+            "Male");
+    }
+    
     @DisplayName("JUnit test for Given Person Object when Save then Return Saved Person")
     @Test
     void testGivenPersonObject_whenSave_thenReturnSavedPerson() {
         
         // Given / Arrange
-        Person person0 = new Person("Leandro",
-            "Costa",
-            "leandro@erudio.com.br",
-            "Uberlândia - Minas Gerais - Brasil", "Male");
         
         // When / Act
         Person savedPerson = repository.save(person0);
@@ -43,10 +53,6 @@ class PersonRepositoryTest {
     void testGivenPersonList_whenFindAll_thenReturnPersonList() {
         
         // Given / Arrange
-        Person person0 = new Person("Leandro",
-                "Costa",
-                "leandro@erudio.com.br",
-                "Uberlândia - Minas Gerais - Brasil", "Male");
         
         Person person1 = new Person("Leonardo",
                 "Costa",
@@ -69,11 +75,6 @@ class PersonRepositoryTest {
     void testGivenPersonObject_whenFindByID_thenReturnPersonObject() {
         
         // Given / Arrange
-        Person person0 = new Person("Leandro",
-            "Costa",
-            "leandro@erudio.com.br",
-            "Uberlândia - Minas Gerais - Brasil", "Male");
-        
         repository.save(person0);
         
         // When / Act
@@ -89,11 +90,6 @@ class PersonRepositoryTest {
     void testGivenPersonObject_whenFindByEmail_thenReturnPersonObject() {
         
         // Given / Arrange
-        Person person0 = new Person("Leandro",
-                "Costa",
-                "leandro@erudio.com.br",
-                "Uberlândia - Minas Gerais - Brasil", "Male");
-        
         repository.save(person0);
         
         // When / Act
@@ -109,11 +105,6 @@ class PersonRepositoryTest {
     void testGivenPersonObject_whenUpdatePerson_thenReturnUpdatedPersonObject() {
         
         // Given / Arrange
-        Person person0 = new Person("Leandro",
-            "Costa",
-            "leandro@erudio.com.br",
-            "Uberlândia - Minas Gerais - Brasil", "Male");
-        
         repository.save(person0);
         
         // When / Act
@@ -134,11 +125,6 @@ class PersonRepositoryTest {
     void testGivenPersonObject_whenDelete_thenRemovePerson() {
         
         // Given / Arrange
-        Person person0 = new Person("Leandro",
-            "Costa",
-            "leandro@erudio.com.br",
-            "Uberlândia - Minas Gerais - Brasil", "Male");
-        
         repository.save(person0);
         
         // When / Act
@@ -155,11 +141,6 @@ class PersonRepositoryTest {
     void testGivenFirstNameAndLastName_whenFindJPQL_thenReturnPersonObject() {
         
         // Given / Arrange
-        Person person0 = new Person("Leandro",
-                "Costa",
-            "leandro@erudio.com.br",
-            "Uberlândia - Minas Gerais - Brasil", "Male");
-        
         repository.save(person0);
         
         String firstName = "Leandro";
@@ -179,11 +160,6 @@ class PersonRepositoryTest {
     void testGivenFirstNameAndLastName_whenFindByJPQLNamedParameters_thenReturnPersonObject() {
         
         // Given / Arrange
-        Person person0 = new Person("Leandro",
-                "Costa",
-                "leandro@erudio.com.br",
-                "Uberlândia - Minas Gerais - Brasil", "Male");
-        
         repository.save(person0);
         
         String firstName = "Leandro";
@@ -203,11 +179,6 @@ class PersonRepositoryTest {
     void testGivenFirstNameAndLastName_whenFindByNativeSQL_thenReturnPersonObject() {
         
         // Given / Arrange
-        Person person0 = new Person("Leandro",
-                "Costa",
-                "leandro@erudio.com.br",
-                "Uberlândia - Minas Gerais - Brasil", "Male");
-        
         repository.save(person0);
         
         String firstName = "Leandro";
@@ -227,11 +198,6 @@ class PersonRepositoryTest {
     void testGivenFirstNameAndLastName_whenFindByNativeSQLwithNamedParameters_thenReturnPersonObject() {
         
         // Given / Arrange
-        Person person0 = new Person("Leandro",
-                "Costa",
-                "leandro@erudio.com.br",
-                "Uberlândia - Minas Gerais - Brasil", "Male");
-        
         repository.save(person0);
         
         String firstName = "Leandro";
