@@ -3,7 +3,7 @@
 
 [![Image](https://github.com/leandrocgsi/RestWithSpringBootUdemy/blob/master/Images/rest_apis_restful_do_0_à_nuvem_com_spring_boot_2_e_docker.png?raw=true "REST API's RESTFul do 0 à AWS com Spring Boot 3, Java e Docker")](https://www.udemy.com/course/restful-apis-do-0-a-nuvem-com-springboot-e-docker/?couponCode=GTHB_FLASH_SALE2021)
 
-Este é o repositório dos codigos fonte desenvolvidos no curso [REST API's RESTFul do 0 à AWS com Spring Boot 3, Java e Docker](https://www.udemy.com/course/restful-apis-do-0-a-nuvem-com-springboot-e-docker/?couponCode=GTHB_FLASH_SALE2021)
+Este é o repositório dos codigos fonte desenvolvidos no curso [Java Unit Testing com Spring Boot 3, Junit 5 e Mockito](https://www.udemy.com/course/restful-apis-do-0-a-nuvem-com-springboot-e-docker/?couponCode=GTHB_FLASH_SALE2021)
 
 # Cursos Relacionados
 
