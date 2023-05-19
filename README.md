@@ -25,8 +25,8 @@ Este é o repositório dos codigos fonte desenvolvidos no curso [Java Unit Testi
 
 ## [Configuração do Ambiente de Desenvolvimento Spring Boot e Java no Windows](https://www.youtube.com/watch?v=sdY-N6nnyaE)
 
-[![Montando um Ambiente de Desenvolvimento Spring Boot e Java no Windows: Minicurso Gratuito Completo!](https://img.youtube.com/vi/sdY-N6nnyaE/0.jpg)](https://www.youtube.com/watch?v=sdY-N6nnyaE)
+[![Montando um Ambiente de Desenvolvimento Spring Boot e Java no Windows: Minicurso Gratuito Completo!](https://raw.githubusercontent.com/leandrocgsi/RestWithSpringBootUdemy/master/Images/cover/windows.png)](https://www.youtube.com/watch?v=sdY-N6nnyaE)
 
 ## [Configuração do Ambiente de Desenvolvimento Spring Boot e Java no Linux (Ubuntu/Debian)](https://www.youtube.com/watch?v=dEszOKOR4Nk)
 
-[![Montando um Ambiente de Desenvolvimento Spring Boot e Java no Linux: Minicurso Gratuito Completo!](https://img.youtube.com/vi/dEszOKOR4Nk/0.jpg)](https://www.youtube.com/watch?v=dEszOKOR4Nk)
+[![Montando um Ambiente de Desenvolvimento Spring Boot e Java no Linux: Minicurso Gratuito Completo!](https://raw.githubusercontent.com/leandrocgsi/RestWithSpringBootUdemy/master/Images/cover/linux.png)](https://www.youtube.com/watch?v=dEszOKOR4Nk)
