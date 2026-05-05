@@ -46,8 +46,8 @@ Este é o repositório dos códigos fonte desenvolvidos no curso [Formação Jav
 
 ## [Como Configurar Ambiente de DEV Spring Boot no Windows: Java, Maven, IntelliJ e MySQL Guia Completo](https://www.youtube.com/watch?v=M-0HxNoUeNE)
 
-[![Montando um Ambiente de Desenvolvimento Spring Boot e Java no Windows: Minicurso Gratuito Completo!](https://raw.githubusercontent.com/leandrocgsi/RestWithSpringBootUdemy/master/Images/cover/windows.png)](https://www.youtube.com/watch?v=M-0HxNoUeNE)
+[![Montando um Ambiente de Desenvolvimento Spring Boot e Java no Windows: Minicurso Gratuito Completo!](https://img.youtube.com/vi/M-0HxNoUeNE/maxresdefault.jpg)](https://www.youtube.com/watch?v=M-0HxNoUeNE)
 
 ## [Como Configurar Ambiente de DEV Spring Boot no Linux: Java, Maven, IntelliJ e MySQL Guia Completo](https://www.youtube.com/watch?v=Wk5645fHrVU)
 
-[![Montando um Ambiente de Desenvolvimento Spring Boot e Java no Linux: Minicurso Gratuito Completo!](https://raw.githubusercontent.com/leandrocgsi/RestWithSpringBootUdemy/master/Images/cover/linux.png)](https://www.youtube.com/watch?v=Wk5645fHrVU)
+[![Montando um Ambiente de Desenvolvimento Spring Boot e Java no Linux: Minicurso Gratuito Completo!](https://img.youtube.com/vi/Wk5645fHrVU/maxresdefault.jpg)](https://www.youtube.com/watch?v=Wk5645fHrVU)
